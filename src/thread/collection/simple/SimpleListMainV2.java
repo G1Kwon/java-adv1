@@ -2,15 +2,16 @@ package thread.collection.simple;
 
 import static util.MyLogger.log;
 
-import thread.collection.simple.list.BasicList;
+import thread.collection.simple.list.SyncList;
 
 public class SimpleListMainV2 {
 
   public static void main(String[] args) throws InterruptedException {
-    test(new BasicList());
+//    test(new BasicList());
+    test(new SyncList());
   }
 
-  private static void test(BasicList list) throws InterruptedException {
+  private static void test(SyncList list) throws InterruptedException {
     log(list.getClass().getSimpleName());
 
     // A 를 리스트에 저장하는 코드
